@@ -1,0 +1,68 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --accent: #38bdf8;
+    --text: #f8fafc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    text-align: center;
+}
+
+h1 { font-weight: 300; letter-spacing: 2px; }
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.box {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    font-size: 2.5rem;
+    color: var(--accent);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.box:disabled {
+    cursor: default;
+    color: #fff;
+}
+
+#reset-btn {
+    padding: 10px 25px;
+    background: var(--accent);
+    border: none;
+    border-radius: 5px;
+    color: var(--bg-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reset-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.hide { display: none; }
